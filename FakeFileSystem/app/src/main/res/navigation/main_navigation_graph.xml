@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_navigation_graph"
+    app:startDestination="@id/startFolderFragment">
+
+    <fragment
+        android:id="@+id/folderFragment"
+        android:name="com.lupaina.fakefilesystem.fragments.FolderFragment"
+        android:label="FolderFragment" >
+        <action
+            android:id="@+id/action_folderFragment_self"
+            app:destination="@id/folderFragment" />
+        <action
+            android:id="@+id/action_folderFragment_to_fileFragment"
+            app:destination="@id/fileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fileFragment"
+        android:name="com.lupaina.fakefilesystem.fragments.FileFragment"
+        android:label="FileFragment" />
+    <fragment
+        android:id="@+id/startFolderFragment"
+        android:name="com.lupaina.fakefilesystem.fragments.StartFolderFragment"
+        android:label="StartFolderFragment" >
+        <action
+            android:id="@+id/action_startFolderFragment_to_folderFragment"
+            app:destination="@id/folderFragment"
+/>
+    </fragment>
+</navigation>
