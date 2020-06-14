@@ -61,6 +61,7 @@ public class MainActivity extends DaggerAppCompatActivity implements MainContrac
         Intent intent = new Intent(this, FolderActivity.class);
         intent.putExtra("folderModel", folderModel);
         startActivity(intent);
+
         /** Модель передаю через intent за допомогою Parcelable.
          Нового для мене, але старого для світу:)
          */
